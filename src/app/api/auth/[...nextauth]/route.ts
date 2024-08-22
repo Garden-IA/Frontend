@@ -1,6 +1,7 @@
 import nextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { login, register } from '../../../../utils/api';
+import { User } from '../../../../interfaces/user/User';
 
 const handler = nextAuth({
   providers: [
@@ -26,7 +27,7 @@ const handler = nextAuth({
         console.log(response);
 
         // Add logic here to look up the user from the credentials supplied
-        const user = {
+        const user: User = {
           id: response.id,
           token: response.token,
           email: response.email,
