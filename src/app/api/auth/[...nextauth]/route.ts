@@ -1,6 +1,6 @@
 import nextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { register } from '../../../../utils/api';
+import { login, register } from '../../../../utils/api';
 
 const handler = nextAuth({
   providers: [
@@ -19,13 +19,18 @@ const handler = nextAuth({
         const email = credentials?.email;
         const password = credentials?.password;
 
-        if (email && password) {
-          const response = await register({ email, password });
-          console.log(response);
-        }
+        if (!email || typeof email !== 'string') return null;
+        if (!password || typeof password !== 'string') return null;
+
+        const response = await login({ email, password });
+        console.log(response);
 
         // Add logic here to look up the user from the credentials supplied
-        const user = { id: '1', name: 'J Smith', email: 'jsmith@example.com' };
+        const user = {
+          id: response.id,
+          token: response.token,
+          email: response.email,
+        };
 
         if (user) {
           // Any object returned will be saved in `user` property of the JWT
