@@ -1,0 +1,37 @@
+/* src/styles/navbar.css */
+
+nav {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  padding: 1rem;
+  width: 250px; /* Ajusta el ancho según sea necesario */
+  position: fixed; /* Fijar el navbar a la izquierda */
+  top: 0;
+  left: 0;
+  height: calc(100vh - 4rem); /* Ajusta para tener espacio para el header y footer */
+  overflow-y: auto; /* Añadir desplazamiento si es necesario */
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-logo {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: block;
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-primary-hover);
+}

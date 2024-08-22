@@ -1,3 +1,33 @@
+/* global.css */
+
+/* Importa las directivas básicas de Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Importar otros estilos */
+@import './variables.css';
+@import './buttons.css';
+@import './cards.css';
+@import './inputs.css';
+@import './navbar.css';
+@import './header.css';
+@import './footer.css';
+
+/* Estilos globales personalizados */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Estilo para enlaces */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
