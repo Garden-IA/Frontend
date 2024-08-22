@@ -1,8 +1,9 @@
 import axiosInstance from '../config/axiosConfig';
+import { Credentials } from '../interfaces/credentials/Credentials';
 
-export const login = async ({ email, password }) => {
+export const login = async ({ email, password }: Credentials) => {
   try {
-    const response = await axiosInstance.post('/login', { email, password });
+    const response = await axiosInstance.post('/auth/login', { email, password });
     return response.data;
   } catch (error) {
     console.error('Error logging in:', error);
@@ -10,9 +11,9 @@ export const login = async ({ email, password }) => {
   }
 };
 
-export const register = async ({ email, password }) => {
+export const register = async ({ email, password }: Credentials) => {
   try {
-    const response = await axiosInstance.post('/register', { email, password });
+    const response = await axiosInstance.post('/auth/register', { email, password });
     return response.data;
   } catch (error) {
     console.error('Error registering:', error);

@@ -4,9 +4,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <main>
-          <SessionProvider> {children}</SessionProvider>
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000/api/v1'; // Cambia esto según tu configuración
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL; // Cambia esto según tu configuración
 
 // Configuración de Axios
 const axiosInstance = axios.create({
@@ -14,9 +14,12 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   config => {
     // Puedes añadir un token de autenticación aquí si lo necesitas
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+    if (typeof window !== 'undefined') {
+      // Aquí es seguro acceder a localStorage
+      const token = localStorage.getItem('token');
+      if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
     }
     return config;
   },
