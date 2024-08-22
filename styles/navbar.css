@@ -1,37 +1,73 @@
-/* src/styles/navbar.css */
+/* navbar.css */
 
-nav {
-  font-family: var(--font-family);
-  background-color: var(--background-color);
-  padding: 1rem;
-  width: 250px; /* Ajusta el ancho según sea necesario */
-  position: fixed; /* Fijar el navbar a la izquierda */
-  top: 0;
-  left: 0;
-  height: calc(100vh - 4rem); /* Ajusta para tener espacio para el header y footer */
-  overflow-y: auto; /* Añadir desplazamiento si es necesario */
-}
-
-.navbar-content {
+/* Estilo para el contenedor de la barra de navegación */
+.navbar {
+  background-color: var(--color-primary); /* Usar la variable de color de fondo */
+  color: var(--text-color); /* Usar la variable de color de texto */
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem; /* Añadir padding si es necesario */
 }
 
-.navbar-logo {
-  font-size: var(--font-size-large);
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* Estilo para el logotipo de la barra de navegación */
+.navbar-logo a {
+  color: var(--text-color); /* Color del texto del logotipo */
+  text-decoration: none; /* Sin subrayado en el enlace */
+  font-size: var(--font-size-large); /* Tamaño de fuente grande para el logotipo */
+  font-weight: bold; /* Fuente en negrita */
 }
 
-nav a {
-  display: block;
-  color: var(--color-primary);
-  font-size: var(--font-size-base);
-  text-decoration: none;
-  padding: 0.75rem 1rem;
-  transition: color 0.3s ease;
+/* Estilo para el contenedor de los enlaces */
+.navbar-links {
+  display: flex; /* Usar flexbox para alinear los enlaces horizontalmente */
+  list-style: none; /* Quitar viñetas de la lista */
+  padding: 0; /* Quitar el padding de la lista */
+  margin: 0; /* Quitar el margen de la lista */
 }
 
-nav a:hover {
-  color: var(--color-primary-hover);
+/* Estilo para los enlaces de la barra de navegación */
+.navbar-links a {
+  color: var(--text-color); /* Color del texto de los enlaces */
+  text-decoration: none; /* Sin subrayado en los enlaces */
+  padding: 0rem 0.5rem; /* Espaciado alrededor del enlace */
+  font-size: var(--font-size-base); /* Tamaño de fuente base */
+  display: flex; /* Asegura que el padding se aplique correctamente */
+  align-items: center; /* Centra verticalmente el texto en los enlaces */
+}
+
+/* Estilo para los enlaces al pasar el ratón por encima */
+.navbar-links a:hover {
+  color: var(--color-primary-hover); /* Color al pasar el ratón por encima */
+}
+
+/* Estilo para el botón de menú (hamburguesa) */
+.navbar-toggle .toggle-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: var(--text-color); /* Color del texto del botón */
+  font-size: 1.5rem; /* Tamaño de fuente del botón */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar clickeable */
+  display: none; /* Oculta el botón por defecto en pantallas grandes */
+}
+
+/* Estilo para la vista en dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Oculta los enlaces en pantallas pequeñas por defecto */
+    flex-direction: column; /* Muestra los enlaces en columna */
+    position: absolute; /* Posiciona la lista de enlaces de forma absoluta */
+    top: 60px; /* Ajusta la posición desde el top */
+    right: 20px; /* Ajusta la posición desde el borde derecho */
+    background-color: var(--background-color); /* Fondo del menú desplegable */
+    width: 200px; /* Ancho del menú desplegable */
+  }
+
+  .navbar-links.active {
+    display: flex; /* Muestra los enlaces cuando el botón de menú está activo */
+  }
+
+  .navbar-toggle .toggle-button {
+    display: block; /* Muestra el botón de menú en pantallas pequeñas */
+  }
 }
