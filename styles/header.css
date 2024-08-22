@@ -6,7 +6,7 @@ header {
   padding: 1rem;
   text-align: center;
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0; /* Asegura que el header esté alineado al borde izquierdo de la pantalla */
   z-index: 1000; /* Asegúrate de que el header esté encima del contenido */
