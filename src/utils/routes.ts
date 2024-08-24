@@ -1,8 +1,12 @@
 // src/utils/routes.ts
 export const routes = {
   home: {
-    path: '/',
+    path: '/dashboard/home',
     label: 'Home',
+  },
+  signin: {
+    path: '/api/auth/signin',
+    label: 'Signin',
   },
   profile: {
     path: '/profile',

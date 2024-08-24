@@ -23,24 +23,27 @@ const handler = nextAuth({
         if (!email || typeof email !== 'string') return null;
         if (!password || typeof password !== 'string') return null;
 
-        const response = await login({ email, password });
-        console.log(response);
+        try {
+          const response = await login({ email, password });
+          console.log(response);
 
-        // Add logic here to look up the user from the credentials supplied
-        const user: User = {
-          id: response.id,
-          token: response.token,
-          email: response.email,
-        };
+          // Add logic here to look up the user from the credentials supplied
+          const user: User = {
+            id: response.id,
+            token: response.token,
+            email: response.email,
+          };
 
-        if (user) {
-          // Any object returned will be saved in `user` property of the JWT
-          return user;
-        } else {
-          // If you return null then an error will be displayed advising the user to check their details.
+          if (user) {
+            // Any object returned will be saved in `user` property of the JWT
+            return user;
+          } else {
+            // If you return null then an error will be displayed advising the user to check their details.
+            return null;
+          }
+        } catch (error) {
+          console.log(error);
           return null;
-
-          // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
         }
       },
     }),

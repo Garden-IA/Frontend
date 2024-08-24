@@ -1,5 +1,15 @@
 /* global.css */
 
+@font-face {
+  font-family: 'Helvetica Now';
+  src: url('../public/fonts/helvetica-now/helveticanowtext-black-demo.ttf') format('truetype'),
+    url('../public/fonts/helvetica-now/helveticanowtext-blackitalic-demo.ttf') format('truetype'),
+    url('../public/fonts/helvetica-now/helveticanowtext-bold-demo.ttf') format('truetype'),
+    url('../public/fonts/helvetica-now/helveticanowtext-bolditalic-demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Importa las directivas básicas de Tailwind CSS */
 @tailwind base;
 @tailwind components;
@@ -11,15 +21,18 @@
 @import './cards.css';
 @import './inputs.css';
 @import './navbar.css';
-@import './header.css';
 @import './footer.css';
 
 /* Estilos globales personalizados */
 body {
-  font-family: var(--font-family);
+  font-family: 'Helvetica Now', sans-serif;
   font-size: var(--font-size-base);
   color: var(--text-color);
   background-color: var(--background-color);
+}
+
+.content {
+  padding: 1rem;
 }
 
 /* Estilo para enlaces */

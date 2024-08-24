@@ -8,9 +8,7 @@ import SessionAuthProvider from './src/context/SessionAuthProvider';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <SessionAuthProvider>
-        <Component {...pageProps} />
-      </SessionAuthProvider>
+      <Component {...pageProps} />
     </>
   );
 }

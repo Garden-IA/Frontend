@@ -3,17 +3,41 @@
 footer {
   background-color: var(--color-primary);
   color: var(--text-color);
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
-  width: 100%; /* Ajusta para dejar espacio para el navbar */
-  position: fixed;
-  bottom: 0; /* Debe ser igual al ancho del navbar */
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-copyright {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links li:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.5rem;
+  color: var(--text-color);
 }
 
 footer a {
   color: var(--color-secondary);
   text-decoration: none;
-  margin: 0 0.5rem;
   transition: color 0.3s ease;
 }
 

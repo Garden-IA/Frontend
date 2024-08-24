@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { routes } from '../../utils/routes';
 import '../../../styles/globals.css';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
+import { isAuthenticated } from '../../utils/checkAuthentication';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,25 +13,33 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {}, [isOpen]);
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo text-xl font-bold">
-        <Link href="/">MiSitio</Link>
+      <div className="navbar-logo">
+        <Link href="/">Gardenia</Link>
       </div>
-      <ul className={`navbar-links ${isOpen ? 'active' : 'hidden'} md:flex space-x-6`}>
+      <ul className={`navbar-links ${isOpen ? 'active' : 'hidden'} md:flex`}>
         <li>
-          <Link href="/">Inicio</Link>
+          <Link href="/plants">Plantas</Link>
         </li>
         <li>
-          <Link href="/about">Acerca de</Link>
+          <span className="separator">|</span>
         </li>
         <li>
-          <Link href="/services">Servicios</Link>
+          <Link href="/tools">Herramientas</Link>
         </li>
         <li>
-          <Link href="/contact">Contacto</Link>
+          <span className="separator">|</span>
+        </li>
+        <li>
+          <Link href="/rooms">Habitaciones</Link>
         </li>
       </ul>
+      <button className="navbar-user" onClick={() => (isAuthenticated() ? (window.location.href = '/profile') : (window.location.href = '/login'))}>
+        <UserCircleIcon className="h-6 w-6"></UserCircleIcon>
+      </button>
       <button className="navbar-toggle" onClick={handleToggleClick}>
         <span className="toggle-button">☰</span>
       </button>

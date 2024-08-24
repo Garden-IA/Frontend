@@ -2,72 +2,116 @@
 
 /* Estilo para el contenedor de la barra de navegación */
 .navbar {
-  background-color: var(--color-primary); /* Usar la variable de color de fondo */
-  color: var(--text-color); /* Usar la variable de color de texto */
+  background-color: var(--color-primary);
+  color: var(--text-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0rem; /* Añadir padding si es necesario */
+  padding: 0.5rem 1rem;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+}
+
+/* Contenedor que divide el navbar en 4 partes iguales */
+.navbar-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Opcional: establece un ancho máximo para el navbar */
+  margin: 0 auto; /* Centra el navbar horizontalmente */
 }
 
 /* Estilo para el logotipo de la barra de navegación */
+.navbar-logo {
+  flex: 1; /* Ocupa 1 parte del ancho total */
+}
+
 .navbar-logo a {
-  color: var(--text-color); /* Color del texto del logotipo */
-  text-decoration: none; /* Sin subrayado en el enlace */
-  font-size: var(--font-size-large); /* Tamaño de fuente grande para el logotipo */
-  font-weight: bold; /* Fuente en negrita */
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Estilo para el contenedor de los enlaces */
 .navbar-links {
-  display: flex; /* Usar flexbox para alinear los enlaces horizontalmente */
-  list-style: none; /* Quitar viñetas de la lista */
-  padding: 0; /* Quitar el padding de la lista */
-  margin: 0; /* Quitar el margen de la lista */
+  flex: 2; /* Ocupa 2 partes del ancho total */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
 }
 
-/* Estilo para los enlaces de la barra de navegación */
+.navbar-links li {
+  display: inline;
+}
+
 .navbar-links a {
-  color: var(--text-color); /* Color del texto de los enlaces */
-  text-decoration: none; /* Sin subrayado en los enlaces */
-  padding: 0rem 0.5rem; /* Espaciado alrededor del enlace */
-  font-size: var(--font-size-base); /* Tamaño de fuente base */
-  display: flex; /* Asegura que el padding se aplique correctamente */
-  align-items: center; /* Centra verticalmente el texto en los enlaces */
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }
 
-/* Estilo para los enlaces al pasar el ratón por encima */
 .navbar-links a:hover {
-  color: var(--color-primary-hover); /* Color al pasar el ratón por encima */
+  color: var(--color-secondary);
 }
 
-/* Estilo para el botón de menú (hamburguesa) */
+.separator {
+  color: var(--text-color);
+  margin: 0 0.5rem;
+}
+
+/* Estilo para el botón de perfil */
+.navbar-user {
+  flex: 1; /* Ocupa 1 parte del ancho total */
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de menú hamburguesa */
 .navbar-toggle .toggle-button {
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  color: var(--text-color); /* Color del texto del botón */
-  font-size: 1.5rem; /* Tamaño de fuente del botón */
-  cursor: pointer; /* Cambia el cursor a una mano para indicar clickeable */
-  display: none; /* Oculta el botón por defecto en pantallas grandes */
+  display: none;
 }
 
-/* Estilo para la vista en dispositivos móviles */
+/* Responsivo */
 @media (max-width: 768px) {
   .navbar-links {
-    display: none; /* Oculta los enlaces en pantallas pequeñas por defecto */
-    flex-direction: column; /* Muestra los enlaces en columna */
-    position: absolute; /* Posiciona la lista de enlaces de forma absoluta */
-    top: 60px; /* Ajusta la posición desde el top */
-    right: 20px; /* Ajusta la posición desde el borde derecho */
-    background-color: var(--background-color); /* Fondo del menú desplegable */
-    width: 200px; /* Ancho del menú desplegable */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--background-color);
+    width: 200px;
+    border-radius: 8px;
+    gap: 0;
   }
 
   .navbar-links.active {
-    display: flex; /* Muestra los enlaces cuando el botón de menú está activo */
+    display: flex;
   }
 
   .navbar-toggle .toggle-button {
-    display: block; /* Muestra el botón de menú en pantallas pequeñas */
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
   }
 }

@@ -2,11 +2,6 @@
 
 /* Definición de variables CSS */
 :root {
-  --font-family: 'Inter', sans-serif;
-  --font-size-base: 16px;
-  --font-size-small: 14px;
-  --font-size-large: 18px;
-
   --background-color: #e0e0e0; /* Blanco */
   --text-color: #121212; /* Negro */
 
