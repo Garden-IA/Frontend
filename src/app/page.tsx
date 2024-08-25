@@ -1,27 +1,22 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Prueba from '../components/prueba/Prueba';
-import ThemeToggle from '../components/themeToggle/ThemeToggle';
-import { isAuthenticated } from '../utils/checkAuthentication';
+import { isAuthenticated } from '../utils/session';
 import { routes } from '../utils/routes';
 
 export default function Home() {
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
 
-  const redirect = () => {
-    router.push('/prueba');
-  };
+  useEffect(() => {
+    !isAuthenticated ? router.push(routes.signin.path) : router.push(routes.home.path);
+    setLoading(false);
+  }, [router]);
 
-  !isAuthenticated ? router.push(routes.signin.path) : router.push(routes.home.path);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // return (
-  //   <div className="flex flex-col items-center justify-center h-screen bg-background text-text">
-  //     <h1 className="text-4xl font-bold">Bienvenido a My App</h1>
-
-  //     <ThemeToggle />
-  //     <Prueba />
-  //     <button onClick={redirect}>AAAAAAAAAAAAA</button>
-  //   </div>
-  // );
+  return null;
 }

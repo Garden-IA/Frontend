@@ -1,26 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { getProfile } from '../../utils/api';
+import { getSession } from '../../utils/session';
 
 export default function Profile() {
-  const [profile, setProfile] = useState(null);
+  const session = getSession();
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      const data = await getProfile();
-      setProfile(data);
-    };
-
-    fetchProfile();
-  }, []);
-
-  if (!profile) return <p>Loading...</p>;
+  const name = session.user.name;
+  const email = session.user.email;
+  const image = session.user.image;
 
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold">Profile</h2>
-      <p>Email: {profile.email}</p>
+      <p>Email: {email}</p>
     </div>
   );
 }

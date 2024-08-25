@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import '../../../styles/globals.css';
 import { UserCircleIcon } from '@heroicons/react/24/solid';
-import { isAuthenticated } from '../../utils/checkAuthentication';
+import { isAuthenticated } from '../../utils/session';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

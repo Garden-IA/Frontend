@@ -1,6 +1,6 @@
 import nextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { login, register } from '../../../../utils/api';
+import { login } from '../../../../utils/api';
 import { User } from '../../../../interfaces/user/User';
 
 const handler = nextAuth({
@@ -30,8 +30,12 @@ const handler = nextAuth({
           // Add logic here to look up the user from the credentials supplied
           const user: User = {
             id: response.id,
-            token: response.token,
             email: response.email,
+            name: response.name ?? null,
+            // image: response.image ?? null,
+            // role: response.role ?? null,
+            // locale: response.locale ?? null,
+            lastLogin: response.lastLogin ?? null,
           };
 
           if (user) {
@@ -48,6 +52,33 @@ const handler = nextAuth({
       },
     }),
   ],
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+        token.name = user.name;
+        // token.image = user.image;
+        // token.role = user.role;
+        // token.locale = user.locale;
+        token.lastLogin = user.lastLogin;
+      }
+      return token;
+    },
+
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.id as string;
+        session.user.email = token.email as string;
+        session.user.name = token.name ?? null;
+        // session.user.image = (token.image as string) ?? null;
+        // session.user.role = token.role as string;
+        // session.user.locale = token.locale as string;
+        session.user.lastLogin = (token.lastLogin as string) ?? null;
+      }
+      return session;
+    },
+  },
 });
 
 export { handler as GET, handler as POST };
