@@ -17,11 +17,13 @@
 
 /* Importar otros estilos */
 @import './variables.css';
-@import './buttons.css';
-@import './cards.css';
+@import './button.css';
+@import './card.css';
 @import './inputs.css';
 @import './navbar.css';
 @import './footer.css';
+@import './alert.css';
+@import './avatar.css';
 
 /* Estilos globales personalizados */
 body {
