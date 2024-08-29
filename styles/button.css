@@ -10,6 +10,7 @@
   cursor: pointer;
   border: 1px solid transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
 }
 
 /* Botón con estilo primario */

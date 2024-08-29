@@ -2,7 +2,7 @@
 
 import { useSession, getCsrfToken, signIn } from 'next-auth/react';
 
-export const isAuthenticated = (status: String) => {
+export const isAuthenticated = (status: string) => {
   return status === 'authenticated' ? true : false;
 };
 

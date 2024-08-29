@@ -11,6 +11,7 @@ import { routes } from '../../utils/routes';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   const router = useRouter();
 
