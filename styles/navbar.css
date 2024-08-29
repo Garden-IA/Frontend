@@ -2,16 +2,13 @@
 
 /* Estilo para el contenedor de la barra de navegación */
 .navbar {
+  border-radius: 0.5rem; /* Rounded-lg */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
   background-color: var(--color-primary);
   color: var(--text-color);
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  position: relative;
   width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
 }
 
@@ -21,11 +18,6 @@
   width: 100%;
   max-width: 1200px; /* Opcional: establece un ancho máximo para el navbar */
   margin: 0 auto; /* Centra el navbar horizontalmente */
-}
-
-/* Estilo para el logotipo de la barra de navegación */
-.navbar-logo {
-  flex: 1; /* Ocupa 1 parte del ancho total */
 }
 
 .navbar-logo a {
@@ -62,16 +54,8 @@
   color: var(--color-secondary);
 }
 
-.separator {
-  color: var(--text-color);
-  margin: 0 0.5rem;
-}
-
 /* Estilo para el botón de perfil */
 .navbar-user {
-  flex: 1; /* Ocupa 1 parte del ancho total */
-  background: var(--color-secondary);
-  border: none;
   border-radius: 50%;
   color: var(--text-color);
   font-size: 1.5rem;

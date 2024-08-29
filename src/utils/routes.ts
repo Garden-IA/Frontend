@@ -9,16 +9,28 @@ export const routes = {
     label: 'Signin',
   },
   profile: {
-    path: '/profile',
+    path: '/user/profile',
     label: 'Profile',
   },
   plants: {
     path: '/plants',
     label: 'Plants',
   },
+  tools: {
+    path: '/tools',
+    label: 'Herramientas',
+  },
   about: {
     path: '/about',
     label: 'About',
+  },
+  privatePolicy: {
+    path: '/private-police',
+    label: 'Private Policy',
+  },
+  licensing: {
+    path: '/licensing',
+    label: 'Licensing',
   },
   contact: {
     path: '/contact',

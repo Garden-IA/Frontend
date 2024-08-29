@@ -44,16 +44,11 @@ export default function Profile() {
             <p>LastLogin: {moment(lastLogin, 'DD-MM-YYYY HH:mm:ss').toString()}</p>
           </Card>
         </div>
-        <Button className="btn btn-primary">Hola</Button>
+        <Button className="btn btn-primary mb-4">Hola</Button>
         <Alert className="alert" title="Hola">
           {' '}
           <p>Esto es una prueba para ver como funcionan las alertas</p>
         </Alert>
-        <Avatar
-          src="https://cdn.icon-icons.com/icons2/2643/PNG/512/avatar_female_woman_person_people_white_tone_icon_159360.png"
-          title="Hola"
-          description="Descripción"
-        />
       </>
     );
   }

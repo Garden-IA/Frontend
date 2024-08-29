@@ -11,7 +11,7 @@ interface Props {
 
 const Card = ({ title, children, className }: Props) => {
   return (
-    <div className={className}>
+    <div className={`mb-4 ${className}`}>
       {title && <h2>{title}</h2>}
       <div>{children}</div>
     </div>

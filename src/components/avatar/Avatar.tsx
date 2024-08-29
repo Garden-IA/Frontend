@@ -1,3 +1,4 @@
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
 interface Props {
@@ -12,11 +13,16 @@ const Avatar = ({ title, description, src, alt }: Props) => {
     <>
       <div className="avatar-card">
         <div className="flex items-center gap-4">
-          <img className="w-10 h-10 rounded-full" src={src} alt={alt} />
+          {!src ? <UserCircleIcon className="h-12 w-12"></UserCircleIcon> : <img className="w-12 h-12 rounded-full" src={src} alt={alt} />}
+
           {title && description && (
-            <div>
-              <div>{title}</div>
-              <div className="text-sm">{description}</div>
+            <div className="flex flex-col">
+              <div className="self-start">
+                <strong>{title}</strong>
+              </div>
+              <div className="self-start text-sm">
+                <i>{description}</i>
+              </div>
             </div>
           )}
         </div>

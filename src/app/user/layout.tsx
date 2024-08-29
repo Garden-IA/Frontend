@@ -7,7 +7,7 @@ export default function UserLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <Navbar />
-      <div className="content">{children}</div>
+      <div>{children}</div>
       <Footer />
     </>
   );

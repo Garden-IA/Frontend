@@ -2,10 +2,10 @@
 
 @font-face {
   font-family: 'Helvetica Now';
-  src: url('../public/fonts/helvetica-now/helveticanowtext-black-demo.ttf') format('truetype'),
-    url('../public/fonts/helvetica-now/helveticanowtext-blackitalic-demo.ttf') format('truetype'),
-    url('../public/fonts/helvetica-now/helveticanowtext-bold-demo.ttf') format('truetype'),
-    url('../public/fonts/helvetica-now/helveticanowtext-bolditalic-demo.ttf') format('truetype');
+  src: url('../public/fonts/helvetica/Helvetica.ttf') format('truetype'), url('../public/fonts/helvetica/Helvetica-Oblique.ttf') format('truetype'),
+    url('../public/fonts/helvetica/helvetica-light-587ebe5a59211.ttf') format('truetype'),
+    url('../public/fonts/helvetica/Helvetica-BoldOblique.ttf') format('truetype'),
+    url('../public/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,9 +31,6 @@ body {
   font-size: var(--font-size-base);
   color: var(--text-color);
   background-color: var(--background-color);
-}
-
-.content {
   padding: 1rem;
 }
 

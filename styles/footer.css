@@ -1,14 +1,17 @@
 /* src/styles/footer.css */
 
 footer {
+  border-radius: 0.5rem; /* Rounded-lg */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
   background-color: var(--color-primary);
   color: var(--text-color);
-  padding: 1rem 0;
+  width: 100%;
+  z-index: 1000;
   text-align: center;
   width: 100%;
   position: relative;
-  bottom: 0;
-  left: 0;
 }
 
 .footer-copyright {
@@ -27,12 +30,6 @@ footer {
 
 .footer-links li {
   display: inline;
-}
-
-.footer-links li:not(:last-child)::after {
-  content: '|';
-  margin-left: 0.5rem;
-  color: var(--text-color);
 }
 
 footer a {

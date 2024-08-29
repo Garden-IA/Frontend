@@ -8,9 +8,7 @@ Importante:
 */
 
 .avatar-card {
-  padding: 1rem;
-  background-color: yellow;
-  width: fit-content;
+  width: 100%;
 }
 
 .avatar-info {

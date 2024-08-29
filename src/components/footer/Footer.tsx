@@ -3,6 +3,7 @@
 import React from 'react';
 import '../../../styles/globals.css'; // Ajusta la ruta si es necesario
 import moment from 'moment';
+import { routes } from '../../utils/routes';
 
 const Footer: React.FC = () => {
   return (
@@ -12,16 +13,16 @@ const Footer: React.FC = () => {
       </div>
       <ul className="footer-links">
         <li>
-          <a href="#">About</a>
+          <a href={routes.about.path}>{routes.about.label}</a>
         </li>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a href={routes.privatePolicy.path}>{routes.privatePolicy.label}</a>
         </li>
         <li>
-          <a href="#">Licensing</a>
+          <a href={routes.licensing.path}>{routes.licensing.label}</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href={routes.contact.path}>{routes.contact.label}</a>
         </li>
       </ul>
     </footer>

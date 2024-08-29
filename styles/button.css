@@ -2,7 +2,7 @@
 
 /* Clase de botón */
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.375rem;
   font-size: var(--font-size-base);
   font-weight: 600;
@@ -10,8 +10,6 @@
   cursor: pointer;
   border: 1px solid transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 /* Botón con estilo primario */
