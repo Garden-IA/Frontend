@@ -3,6 +3,7 @@
 import React from 'react';
 import '../../../styles/globals.css';
 import Button from '../button/Button';
+import Image from 'next/image';
 
 interface Props {
   title?: string;
@@ -39,7 +40,7 @@ const Card = ({
   return (
     <>
       <div className="flex flex-col rounded-2xl shadow-xl ">
-        {img && <img src={img} alt={imgAlt} className="rounded-t-2xl h-64 object-cover" />}
+        {img && <Image src={img} alt={imgAlt!} className="rounded-t-2xl h-64 object-cover" />}
         <div className="flex flex-col p-8">
           <div className="flex flex-row">
             {icon && icon}

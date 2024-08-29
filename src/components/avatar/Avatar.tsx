@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
 
@@ -13,7 +14,7 @@ const Avatar = ({ title, description, src, alt }: Props) => {
     <>
       <div className="avatar-card">
         <div className="flex items-center gap-4">
-          {!src ? <FaUser className="h-8 w-8"></FaUser> : <img className="w-8 h-8 rounded-full" src={src} alt={alt} />}
+          {!src ? <FaUser className="h-8 w-8"></FaUser> : <Image className="w-8 h-8 rounded-full" src={src} alt={alt!} />}
 
           {title && description && (
             <div className="flex flex-col">

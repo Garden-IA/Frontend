@@ -1,7 +1,6 @@
 'use client';
 
 import moment from 'moment';
-import { getUserData } from '../../../utils/session';
 import Card from '../../../components/card/Card';
 import Button from '../../../components/button/Button';
 import Alert from '../../../components/alert/Alert';
@@ -12,24 +11,25 @@ import Input from '../../../components/input/Input';
 import ThemeToggle from '../../../components/themeToggle/ThemeToggle';
 import { FaGear } from 'react-icons/fa6';
 import { FaUser } from 'react-icons/fa';
+import { useSession } from 'next-auth/react';
 
 export default function Profile() {
-  const userData = getUserData();
+  const { data: session, status } = useSession();
 
   // Datos del usuario
-  const [id, setId] = useState(userData?.id);
-  const [email, setEmail] = useState(userData?.email);
-  const [lastLogin, setLastLogin] = useState(userData?.lastLogin);
+  const [id, setId] = useState(session?.user?.id);
+  const [email, setEmail] = useState(session?.user?.email);
+  const [lastLogin, setLastLogin] = useState(session?.user?.lastLogin);
 
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setId(userData?.id);
-    setEmail(userData?.email);
-    setLastLogin(userData?.lastLogin);
+    setId(session?.user?.id);
+    setEmail(session?.user?.email);
+    setLastLogin(session?.user?.lastLogin);
 
     setIsLoading(false);
-  }, [userData]);
+  }, [session]);
 
   if (isLoading) {
     return <Spinner />;

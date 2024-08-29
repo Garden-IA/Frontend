@@ -1,6 +1,7 @@
 'use client';
 
 import { signIn } from 'next-auth/react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function SignInForm() {
@@ -29,7 +30,7 @@ export default function SignInForm() {
       <div className="flex flex-col w-full md:w-1/2 xl:w-2/5 2xl:w-2/5 3xl:w-1/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
         <div className="flex flex-col justify-center mx-auto items-center gap-3 pb-4">
           <div>
-            <img src="/favicon.svg" width="50" alt="Logo" />
+            <Image src="/favicon.svg" width="50" alt="Logo" />
           </div>
           <h1 className="text-3xl font-bold text-[#4B5563] text-[#4B5563] my-auto">Your Company</h1>
         </div>
@@ -104,7 +105,7 @@ export default function SignInForm() {
             Login
           </button>
           <div className="text-sm font-light text-[#6B7280] text-center">
-            Don't have an accout yet?{' '}
+            {"Don't have an accout yet?"}
             <a href="#" className="font-medium text-[#4F46E5] hover:underline">
               Sign Up
             </a>

@@ -1,12 +1,12 @@
 'use client';
 
 import Card from '../../../components/card/Card';
-import { getSession } from '../../../utils/session';
 import { RiPlantFill } from 'react-icons/ri';
 import { FaGear } from 'react-icons/fa6';
+import { useSession } from 'next-auth/react';
 
 export default function Home() {
-  const session = getSession();
+  const { data: session, status } = useSession();
 
   const email = session?.user?.email;
   return (
