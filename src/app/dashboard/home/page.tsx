@@ -12,13 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <Card
-          title="Datos"
-          img="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          imgAlt="profilePic"
-          className="card"
-          icon={<RiPlantFill className="h-8 w-8 mr-2" />}
-        ></Card>
+        <Card title="Datos" className="card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}></Card>
         <Card
           title="Settings"
           hasBtn={true}

@@ -2,6 +2,7 @@
 
 /* Estilos para los inputs */
 input[type='text'],
+input[type='textarea'],
 input[type='email'],
 input[type='password'] {
   padding: 0.75rem 1rem;
@@ -15,9 +16,10 @@ input[type='password'] {
 
 /* Estilo para los inputs en foco */
 input[type='text']:focus,
+input[type='textarea']:focus,
 input[type='email']:focus,
 input[type='password']:focus {
   border-color: var(--input-border-focus);
   outline: none;
-  background-color: #ffffff; /* Blanco para el fondo del input en foco */
+  background-color: var(--color-accent);
 }
