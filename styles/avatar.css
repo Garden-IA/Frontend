@@ -1,0 +1,58 @@
+/*
+Pequeño: 32x32 píxeles a 48x48 píxeles (por ejemplo, en menús o listas).
+Medio: 64x64 píxeles a 128x128 píxeles (por ejemplo, en perfiles o publicaciones).
+Grande: 256x256 píxeles (para vistas detalladas o páginas de perfil completas).
+
+Importante:
+1 rem = 16px
+*/
+
+.avatar-card {
+  width: 100%;
+}
+
+.avatar-info {
+  background-color: green;
+  display: inline-block;
+}
+
+.avatar-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: red;
+  margin: auto;
+}
+
+/*
+32 x 32 píxeles
+*/
+.small {
+  width: 2rem;
+  height: 2rem;
+}
+
+/*
+64 x 64 píxeles
+*/
+.medium {
+  width: 4rem;
+  height: 4rem;
+}
+
+/*
+128 x 128 píxeles
+*/
+.medium-large {
+  width: 8rem;
+  height: 8rem;
+}
+
+/*
+256 x 256 píxeles
+*/
+.large {
+  width: 16rem;
+  height: 16rem;
+}

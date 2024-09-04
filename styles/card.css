@@ -1,0 +1,15 @@
+/* cards.css */
+
+/* Clase de tarjeta */
+.card {
+  background-color: var(--card-background-light);
+  color: var(--text-color);
+  border-radius: 0.5rem; /* Rounded-lg */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+}

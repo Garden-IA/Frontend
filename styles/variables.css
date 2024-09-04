@@ -1,0 +1,42 @@
+/* variables.css */
+
+/* Definición de variables CSS */
+:root {
+  --background-color: #e0e0e0; /* Blanco */
+  --text-color: #121212; /* Negro */
+
+  --color-primary: #2196f3; /* Azul Principal */
+  --color-primary-hover: #1976d2; /* Azul Principal más oscuro */
+
+  --color-secondary: #64b5f6; /* Azul Claro */
+  --color-secondary-hover: #42a5f5; /* Azul Claro más oscuro */
+
+  --color-accent: #ff5722; /* Naranja Vibrante para el Acento */
+  --color-accent-hover: #e64a19; /* Naranja más oscuro para el Acento */
+
+  --card-background-light: #ffffff; /* Blanco para el fondo de la tarjeta en tema claro */
+  --card-background-dark: #1e1e1e; /* Gris oscuro para el fondo de la tarjeta en tema oscuro */
+
+  --input-border: #bdbdbd; /* Gris Claro para el borde de los inputs */
+  --input-border-focus: #2196f3; /* Azul Principal para el borde de los inputs en foco */
+}
+
+/* Tema oscuro */
+[data-theme='dark'] {
+  --background-color: #121212; /* Negro */
+  --text-color: #e0e0e0; /* Blanco */
+
+  --color-primary: #0d47a1; /* Azul Principal más oscuro */
+  --color-primary-hover: #0a369d; /* Azul Principal aún más oscuro */
+
+  --color-secondary: #1e40a6; /* Azul Claro más oscuro */
+  --color-secondary-hover: #1a237e; /* Azul Claro aún más oscuro */
+
+  --color-accent: #ff7043; /* Naranja más claro para contraste */
+  --color-accent-hover: #f4511e; /* Naranja más oscuro para el acento */
+
+  --card-background-light: #1e1e1e; /* Gris oscuro para el fondo de la tarjeta en tema oscuro */
+  --card-background: #333333; /* Gris más oscuro para el fondo de la tarjeta en tema oscuro */
+  --input-border: #424242; /* Gris Oscuro para el borde de los inputs */
+  --input-border-focus: #64b5f6; /* Azul Claro para el borde de los inputs en foco */
+}

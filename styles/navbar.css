@@ -1,0 +1,101 @@
+/* navbar.css */
+
+/* Estilo para el contenedor de la barra de navegación */
+.navbar {
+  border-radius: 0.5rem; /* Rounded-lg */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  width: 100%;
+  z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+}
+
+/* Contenedor que divide el navbar en 4 partes iguales */
+.navbar-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Opcional: establece un ancho máximo para el navbar */
+  margin: 0 auto; /* Centra el navbar horizontalmente */
+}
+
+.navbar-logo a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Estilo para el contenedor de los enlaces */
+.navbar-links {
+  flex: 2; /* Ocupa 2 partes del ancho total */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--color-secondary);
+}
+
+/* Estilo para el botón de perfil */
+.navbar-user {
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de menú hamburguesa */
+.navbar-toggle .toggle-button {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--background-color);
+    width: 200px;
+    border-radius: 8px;
+    gap: 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle .toggle-button {
+    display: block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,43 @@
+/* src/styles/footer.css */
+
+footer {
+  border-radius: 0.5rem; /* Rounded-lg */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.footer-copyright {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+footer a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--color-secondary-hover);
+}

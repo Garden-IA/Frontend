@@ -1,0 +1,46 @@
+/* global.css */
+
+@font-face {
+  font-family: 'Helvetica Now';
+  src: url('../public/fonts/helvetica/Helvetica.ttf') format('truetype'), url('../public/fonts/helvetica/Helvetica-Oblique.ttf') format('truetype'),
+    url('../public/fonts/helvetica/helvetica-light-587ebe5a59211.ttf') format('truetype'),
+    url('../public/fonts/helvetica/Helvetica-BoldOblique.ttf') format('truetype'),
+    url('../public/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Importa las directivas básicas de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importar otros estilos */
+@import './variables.css';
+@import './button.css';
+@import './card.css';
+@import './inputs.css';
+@import './navbar.css';
+@import './footer.css';
+@import './alert.css';
+@import './avatar.css';
+@import './divider.css';
+
+/* Estilos globales personalizados */
+body {
+  font-family: 'Helvetica Now', sans-serif;
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 1rem;
+}
+
+/* Estilo para enlaces */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
