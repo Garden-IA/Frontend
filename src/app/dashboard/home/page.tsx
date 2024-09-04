@@ -11,8 +11,67 @@ export default function Home() {
   const email = session?.user?.email;
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <Card title="Datos" className="card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}></Card>
+      <div className="flex flex-row flex-wrap gap-4 mb-4 w-full">
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
+        <Card title="Datos" className="grow min-w-full md:min-w-96 card" icon={<RiPlantFill className="h-8 w-8 mr-2" />}>
+          adad
+        </Card>
         <Card
           title="Settings"
           hasBtn={true}
@@ -21,7 +80,7 @@ export default function Home() {
           }}
           btnText="Textooo"
           btnClassName="btn-primary"
-          className="card"
+          className="grow min-w-full md:min-w-96 card"
           hasBtnCancel={true}
           btnCancelOnClick={() => {
             console.log('Click');

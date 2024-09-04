@@ -39,9 +39,9 @@ const Card = ({
 }: Props) => {
   return (
     <>
-      <div className="flex flex-col rounded-2xl shadow-xl ">
+      <div className={`flex flex-col rounded-2xl shadow-xl ${className}`}>
         {img && <Image src={img} alt={imgAlt!} className="rounded-t-2xl h-64 object-cover" />}
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col">
           <div className="flex flex-row items-center mb-4">
             {icon && icon}
             {title && <div className="text-2xl font-bold">{title}</div>}
